@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Tjek_rejseregler" data-name="Tjek rejseregler" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1600 900">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill: #14143c;
+      }
+
+      .cls-1, .cls-3, .cls-4 {
+        stroke-width: 0px;
+      }
+
+      .cls-2 {
+        stroke: #14143c;
+        stroke-width: 3px;
+      }
+
+      .cls-3 {
+        fill: #72728a;
+      }
+
+      .cls-4, .cls-5 {
+        fill: none;
+      }
+
+      .cls-5 {
+        stroke: #72728a;
+        stroke-miterlimit: 10;
+        stroke-width: 18px;
+      }
+
+      .cls-6 {
+        clip-path: url(#clippath);
+      }
+    </style>
+    <clipPath id="clippath">
+      <rect class="cls-4" x="-1" y="-1.01" width="1602" height="902"/>
+    </clipPath>
+  </defs>
+  <rect class="cls-1" x="-1" y="-1.01" width="1602" height="902"/>
+  <g class="cls-6">
+    <path class="cls-3" d="m695.95,200.39c-10.86-5.18-23.86-.57-29.04,10.28l-123.35,258.61c-5.18,10.86-.58,23.86,10.28,29.04l526.4,251.08c10.86,5.18,23.86.58,29.04-10.28l123.35-258.61c5.18-10.86.57-23.86-10.28-29.04l-526.4-251.08Z"/>
+    <path class="cls-3" d="m478.03,313.18c-5.18,10.86-5.29,28.51-.25,39.43l61.71,133.66c5.04,10.92,13.33,10.97,18.51.12l131.3-275.28c5.18-10.86-.08-17.26-11.74-14.31l-142.71,36.16c-11.66,2.96-25.31,14.15-30.49,25.01l-26.33,55.21Z"/>
+    <path class="cls-1" d="m558.29,360.48c19.3,9.21,42.41,1.02,51.62-18.28,9.21-19.3,1.02-42.41-18.28-51.62-19.3-9.21-42.41-1.02-51.62,18.28-9.21,19.3-1.02,42.41,18.28,51.62"/>
+    <path class="cls-5" d="m554.29,360.74C671.9,170.17,415.69-6.16,288.28,121.25"/>
+    <path class="cls-5" d="m504.68,402.73s-226.76,105.32-161.8,288.07"/>
+  </g>
+  <polygon class="cls-2" points="721.48 310.68 714.88 322.42 1142.92 526.58 1149.51 514.85 721.48 310.68"/>
+  <rect class="cls-2" x="895.19" y="244.42" width="13" height="474.23" transform="translate(78.85 1088.05) rotate(-64.5)"/>
+  <rect class="cls-2" x="865.19" y="307.33" width="13" height="474.23" transform="translate(4.98 1096.79) rotate(-64.5)"/>
+</svg>

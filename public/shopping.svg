@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Online_shopping" data-name="Online shopping" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        stroke-width: 0px;
+      }
+
+      .cls-1, .cls-3 {
+        fill: #14143c;
+      }
+
+      .cls-2 {
+        fill: #72728a;
+      }
+
+      .cls-4 {
+        fill: none;
+        stroke: #14143c;
+        stroke-miterlimit: 10;
+        stroke-width: 4.4px;
+      }
+
+      .cls-3 {
+        stroke: #1d1d1b;
+      }
+    </style>
+  </defs>
+  <rect class="cls-3" x="-2" y="-1" width="1602" height="902"/>
+  <polyline class="cls-2" points="495.31 750 1102.37 750 1146.17 373.55 1193.5 373.55 1193.5 320.09 825.84 320.09 825.84 127.09 775.16 127.09 775.16 320.09 407.5 320.09 407.5 373.55 452.07 373.55"/>
+  <rect class="cls-1" x="1024.78" y="402.46" width="23.1" height="271.73"/>
+  <rect class="cls-4" x="1024.78" y="402.46" width="23.1" height="271.73"/>
+  <rect class="cls-1" x="556.3" y="402.46" width="23.1" height="271.73"/>
+  <rect class="cls-4" x="556.3" y="402.46" width="23.1" height="271.73"/>
+  <rect class="cls-1" x="623.23" y="402.46" width="23.1" height="271.73"/>
+  <rect class="cls-4" x="623.23" y="402.46" width="23.1" height="271.73"/>
+  <rect class="cls-1" x="690.15" y="402.46" width="23.1" height="271.73"/>
+  <rect class="cls-4" x="690.15" y="402.46" width="23.1" height="271.73"/>
+  <rect class="cls-1" x="757.08" y="402.46" width="23.1" height="271.73"/>
+  <rect class="cls-4" x="757.08" y="402.46" width="23.1" height="271.73"/>
+  <rect class="cls-1" x="824" y="402.46" width="23.1" height="271.73"/>
+  <rect class="cls-4" x="824" y="402.46" width="23.1" height="271.73"/>
+  <rect class="cls-1" x="890.93" y="402.46" width="23.1" height="271.73"/>
+  <rect class="cls-4" x="890.93" y="402.46" width="23.1" height="271.73"/>
+  <rect class="cls-1" x="957.85" y="402.46" width="23.1" height="271.73"/>
+  <rect class="cls-4" x="957.85" y="402.46" width="23.1" height="271.73"/>
+</svg>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="VAT_refund" data-name="VAT refund" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #14143c;
+      }
+
+      .cls-1, .cls-2 {
+        stroke-width: 0px;
+      }
+
+      .cls-2 {
+        fill: #72728a;
+      }
+    </style>
+  </defs>
+  <rect class="cls-1" y="-1" width="1602" height="902"/>
+  <g>
+    <circle class="cls-2" cx="582.61" cy="326.74" r="49.3"/>
+    <circle class="cls-2" cx="898.58" cy="471.14" r="49.3"/>
+    <circle class="cls-2" cx="771.11" cy="292.49" r="78.16"/>
+    <g>
+      <rect class="cls-2" x="257.94" y="407.22" width="525.17" height="290.45"/>
+      <path class="cls-1" d="m771.11,419.22v266.45h-501.17v-266.45h501.17m24-24H245.94v314.45h549.17v-314.45h0Z"/>
+    </g>
+    <circle class="cls-1" cx="677.51" cy="512.83" r="53.6"/>
+  </g>
+  <rect class="cls-2" x="1063.03" y="151.18" width="276.15" height="597.65"/>
+  <g>
+    <polygon class="cls-1" points="1132.26 151.18 1097.83 185.7 1063.41 151.18 1132.26 151.18"/>
+    <polygon class="cls-1" points="1201.1 151.18 1166.68 185.7 1132.26 151.18 1201.1 151.18"/>
+    <polygon class="cls-1" points="1269.95 151.18 1235.53 185.7 1201.1 151.18 1269.95 151.18"/>
+    <polygon class="cls-1" points="1338.8 151.18 1304.38 185.7 1269.95 151.18 1338.8 151.18"/>
+  </g>
+  <rect class="cls-1" x="1097.07" y="284.51" width="208.07" height="16"/>
+  <rect class="cls-1" x="1097.07" y="346.92" width="208.07" height="16"/>
+  <rect class="cls-1" x="1097.07" y="409.32" width="208.07" height="16"/>
+  <rect class="cls-1" x="1097.07" y="471.72" width="208.07" height="16"/>
+  <g>
+    <polygon class="cls-1" points="1132.26 748.82 1097.83 714.3 1063.41 748.82 1132.26 748.82"/>
+    <polygon class="cls-1" points="1201.1 748.82 1166.68 714.3 1132.26 748.82 1201.1 748.82"/>
+    <polygon class="cls-1" points="1269.95 748.82 1235.53 714.3 1201.1 748.82 1269.95 748.82"/>
+    <polygon class="cls-1" points="1338.8 748.82 1304.38 714.3 1269.95 748.82 1338.8 748.82"/>
+  </g>
+</svg>
