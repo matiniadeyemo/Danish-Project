@@ -14,7 +14,8 @@
           
           <div class="flex">
             <button
-              class="lg:hidden text-sm text-white flex flex-col md:flex-row items-center justify-center align-center h-24px gap-2 p-3 transition-all duration-300 border border-[2px] border-[#14143c] hover:border-[#72728a] hover:border-[2px]"
+              class="lg:hidden text-sm text-white flex flex-col md:flex-row items-center justify-center align-center h-24px gap-2 p-3 transition-all duration-300 border border-[2px] border-[#14143c] hover:border-[#72728a] hover:border-[2px]
+              " @click="toggleMenu"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -87,29 +88,75 @@
         </h1>
       </div>
     </div>
+<transition name="slide-fade" class="fixed w-[90%] h-full z-50 top-0 right-0 left-0 bottom-0 bg-white text-midnight flex flex-col gap-3   border-t border-gray-200 shadow-md lg:hidden">
+<div
+v-if="showMenu"
+class=""
+>   
+        <div class="flex flex-row justify-between  ">
+                <div class="p-8">
+                     <svg xmlns="http://www.w3.org/2000/svg" width="108" height="30" fill="none"><g clip-path="url(#logo-toldst-dark_svg__a)"><path fill="#A3928F" d="m22.898 28.41 1.59-2.014c.637.53 1.803 1.272 2.969 1.272s1.59-.318 1.59-.848c0-1.696-6.043-.106-6.043-3.816 0-1.909 1.803-3.393 4.347-3.393 1.802 0 3.074.742 3.816 1.378l-1.59 1.909c-.424-.424-1.484-.954-2.438-.954-1.06 0-1.484.318-1.484.742 0 1.378 6.042 0 6.042 3.922 0 1.908-1.696 3.604-4.558 3.604-1.484-.212-3.075-.742-4.24-1.802ZM46.539 19.824l-2.014 3.922-2.015-3.922H32.016v2.332h3.074v7.739h2.756v-7.739h2.968l2.226 4.135v3.604h2.863V26.29l3.498-6.467h-2.862ZM50.248 19.824h4.876c2.544 0 3.923 1.378 3.923 3.392 0 1.272-.742 2.333-1.908 2.969l2.12 3.71h-3.075l-1.696-3.18h-1.484v3.18h-2.756v-10.07Zm2.756 2.332v2.227h2.12c.742 0 1.166-.53 1.166-1.167 0-.53-.318-1.06-1.166-1.06h-2.12ZM60.85 19.824h7.526v2.438h-4.77v1.378h3.922v2.333h-3.922v1.59h4.982v2.332H60.85v-10.07ZM77.81 29.895h-7.314v-10.07h2.756v7.738h4.559v2.332ZM78.871 28.41l1.59-2.014c.636.53 1.802 1.272 2.968 1.272s1.59-.318 1.59-.848c0-1.696-6.042-.106-6.042-3.816 0-1.909 1.802-3.393 4.346-3.393 1.803 0 3.075.742 3.817 1.378l-1.59 1.909c-.424-.424-1.485-.954-2.439-.954-1.06 0-1.484.318-1.484.742 0 1.378 6.043 0 6.043 3.922 0 1.908-1.696 3.604-4.559 3.604-1.59-.212-3.18-.742-4.24-1.802ZM89.47 19.824h7.527v2.438h-4.77v1.378h3.922v2.333h-3.922v1.59h4.982v2.332h-7.738v-10.07ZM99.012 19.824h2.544l3.392 5.407v-5.407h2.65v10.07h-2.544l-3.392-5.405v5.406h-2.65v-10.07Z"></path><path fill="#14143C" d="M23.004 7.207h8.798v2.332h-2.968v7.739h-2.756V9.539H23.11V7.207h-.106ZM32.44 12.296c0-3.498 2.756-5.194 5.512-5.194s5.512 1.802 5.512 5.194c0 3.286-2.544 5.194-5.512 5.194-2.862 0-5.512-1.908-5.512-5.194Zm8.268 0c0-1.908-1.272-2.756-2.756-2.756-1.484 0-2.756.954-2.756 2.756 0 1.696 1.378 2.862 2.756 2.862s2.756-1.166 2.756-2.862ZM52.58 17.278h-7.314V7.207h2.756v7.738h4.558v2.333ZM58.197 7.207c2.226 0 5.195 1.06 5.195 5.088 0 3.923-2.969 4.983-5.195 4.983h-4.24V7.207h4.24Zm-1.484 2.332v5.406h1.59c.742 0 2.333-.53 2.333-2.65s-1.59-2.756-2.333-2.756h-1.59ZM3.392 13.675c0-.425.106-1.273-.106-1.697-.318-.53-.848-1.06-1.484-1.59-.318-.212-.848-.636-.848-1.272 0-.954.636-1.166 1.166-1.166.212 0 .318 0 .53.106.106-.318.212-.636.424-.848-.424-.212-.636-.212-.954-.212-.848 0-2.12.636-2.12 2.12 0 .954.636 1.59 1.166 2.12.636.636 1.166 1.272 1.272 2.544h.954v-.105ZM15.37 14.734H2.438v.848H15.37v-.848ZM15.37 16.537H2.438v.848H15.37v-.848ZM15.688 6.996c-.318 0-.53 0-.848.106.212.212.318.53.424.848.106 0 .318-.106.53-.106.424 0 1.166.212 1.166 1.166 0 .636-.53 1.06-.742 1.272-.636.53-1.166 1.06-1.484 1.59-.212.424-.212 1.273-.106 1.697h.954c.106-1.273.636-1.909 1.272-2.545.53-.53 1.166-1.166 1.166-2.12-.212-1.272-1.378-1.908-2.332-1.908ZM9.328 13.675c.106-.742.424-1.06.424-1.696 0-.53-.318-.954-.318-2.757v-2.65H8.48v2.65c0 1.697-.318 2.12-.318 2.757 0 .742.212.954.424 1.696h.742ZM5.3 13.675h.955c.106-.742.318-1.378.106-1.908-.212-.636-.954-1.272-1.484-1.803-.318-.424-.53-.848-.53-1.378 0-.636.424-1.166 1.166-1.166.848 0 1.06.742 2.12.742v-.848c-.636-.106-.954-.742-2.12-.742-.636 0-1.166.212-1.59.636-.318.318-.53.848-.53 1.378 0 .848.424 1.378.848 1.909.53.636 1.06 1.484 1.06 3.18ZM10.282 8.163c.954 0 1.272-.742 2.12-.742.742 0 1.166.53 1.166 1.166 0 .53-.212.954-.636 1.378-.53.53-1.272 1.166-1.484 1.802-.212.53 0 1.166.106 1.908h.954c0-1.802.53-2.544 1.06-3.18.424-.53.848-1.06.848-1.908 0-.53-.212-1.06-.53-1.484-.424-.424-.954-.636-1.59-.636-1.166 0-1.484.742-2.12.742v.954h.106ZM7.42 4.134c0 .848.636 1.484 1.484 1.484s1.484-.636 1.484-1.484c0-.636-.424-1.272-1.06-1.378v-.954h.954V.954h-.954V0H8.48v.954h-.954v.848h.954v.848c-.636.212-1.06.848-1.06 1.484Zm1.484-.742c.424 0 .742.318.742.742a.725.725 0 0 1-.742.742.725.725 0 0 1-.742-.742c0-.424.318-.742.742-.742Z"></path></g><defs><clipPath id="logo-toldst-dark_svg__a"><path fill="#fff" d="M0 0h107.597v30H0z"></path></clipPath></defs></svg>
+                </div>
+             <button class="text-midnight text-sm flex top-0 bottom-0 md:flex-row items-center justify-center align-center w-[3rem] h-[5.6rem] gap-2 p-3 transition-all duration-300 border border-[2px] border-white hover:border-[#14143c] hover:border-[2px]"  @click="closeMenu()">
+             <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="12.7" height="12.7" style="enable-background:new 0 0 12.7 12.7"><path d="M12.7 1.4 11.3 0 6.4 4.9 1.4 0 0 1.4l4.9 5L0 11.3l1.4 1.4 5-4.9 4.9 4.9 1.4-1.4-4.9-4.9z" style="fill:#14143c"></path></svg>
+            </button>
+        </div>
+        <div class="border-t border-gray-300 mt-[-1rem] mb-2"></div>
+        <div class="flex flex-col gap-4 px-6">
+        <router-link to="/" class="hover:text-yellow-600">Home</router-link>
+        <router-link to="/about" class="hover:text-yellow-600" >About Us</router-link>
+        <router-link to="/contact" class="hover:text-yellow-600" >Contact</router-link>
+        </div>
+        <div class="border-t border-gray-300 my-2"></div>
 
-       <div class="p-7 sm:px-7">
-  <div class="bg-white  shadow-sm border">
-    <div
-      class="flex flex-row  overflow-x-auto  lg:grid lg:grid-cols-5 lg:overflow-visible"
-    >
-      <div
-        v-for="item in boxes"
-        :key="item.title"
-        class="group flex-shrink-0 min-w-[16rem] sm:min-w-[18rem] lg:min-w-0 flex flex-col justify-start items-start p-4 rounded-lg transition"
-      >
-        <img
-          :src="item.icon"
-          alt=""
-          class="w-[10rem] h-auto mb-4"
-        />
-        <a
-          :href="item.link"
-          class="font-semibold text-midnight underline underline-offset-4 hover:decoration-[3px] group-hover:decoration-[3px] transition-all duration-150"
-        >
-          {{ item.title }}
+        <div class="flex flex-col gap-2 px-6">
+            <p class="text-sm font-semibold text-gray-500 uppercase">Languages</p>
+            <router-link to="/" class="hover:text-yellow-600">Dansk</router-link>
+            <router-link to="/" class="hover:text-yellow-600" >English</router-link>
+        </div>
+        </div>
+
+    </transition>
+<div class="p-7 sm:px-7">
+  <div class="bg-white shadow-sm border">
+    <div class="flex flex-row overflow-x-auto lg:grid lg:grid-cols-5 lg:overflow-visible">
+      <router-link to="/Vat">
+         <div class="group flex-shrink-0 min-w-[16rem] sm:min-w-[18rem] lg:min-w-0 flex flex-col justify-start items-start p-4 rounded-lg transition">
+        <img src="/refund.svg" alt="VAT refunds" class="w-[10rem] h-auto mb-4" />
+        <a href="#" class="font-semibold text-midnight underline underline-offset-4 hover:decoration-[3px] group-hover:decoration-[3px] transition-all duration-150">
+          VAT refunds
         </a>
       </div>
+      </router-link>
+     
+      <div class="group flex-shrink-0 min-w-[16rem] sm:min-w-[18rem] lg:min-w-0 flex flex-col justify-start items-start p-4 rounded-lg transition">
+        <img src="/travel.svg" alt="Travel" class="w-[10rem] h-auto mb-4" />
+        <a href="#" class="font-semibold text-midnight underline underline-offset-4 hover:decoration-[3px] group-hover:decoration-[3px] transition-all duration-150">
+          Travel
+        </a>
+      </div>
+
+      <div class="group flex-shrink-0 min-w-[16rem] sm:min-w-[18rem] lg:min-w-0 flex flex-col justify-start items-start p-4 rounded-lg transition">
+        <img src="/shopping.svg" alt="Online shopping" class="w-[10rem] h-auto mb-4" />
+        <a href="#" class="font-semibold text-midnight underline underline-offset-4 hover:decoration-[3px] group-hover:decoration-[3px] transition-all duration-150">
+          Online shopping
+        </a>
+      </div>
+
+      <div class="group flex-shrink-0 min-w-[16rem] sm:min-w-[18rem] lg:min-w-0 flex flex-col justify-start items-start p-4 rounded-lg transition">
+        <img src="/gift.svg" alt="Gifts" class="w-[10rem] h-auto mb-4" />
+        <a href="#" class="font-semibold text-midnight underline underline-offset-4 hover:decoration-[3px] group-hover:decoration-[3px] transition-all duration-150">
+          Gifts
+        </a>
+      </div>
+
+      <div class="group flex-shrink-0 min-w-[16rem] sm:min-w-[18rem] lg:min-w-0 flex flex-col justify-start items-start p-4 rounded-lg transition">
+        <img src="/personal.svg" alt="If you move to Denmark" class="w-[10rem] h-auto mb-4" />
+        <a href="#" class="font-semibold text-midnight underline underline-offset-4 hover:decoration-[3px] group-hover:decoration-[3px] transition-all duration-150">
+          If you move to Denmark
+        </a>
+      </div>
+
     </div>
   </div>
 </div>
@@ -122,7 +169,7 @@
       ></div>
 
       <div
-        class="lg:absolute md:absolute relative left-1/2 transform -translate-x-1/2 -bottom-16 sm:-bottom-20 bg-white shadow-lg rounded-sm w-[90%] md:w-[70%] p-6 sm:p-8"
+        class="lg:absolute md:absolute relative left-1/2 transform -translate-x-1/2 -bottom-16 sm:-bottom-20 bg-white shadow-lg w-full rounded-sm w-[90%] md:w-[70%] p-6 sm:p-8"
       >
         <div class="h-2 w-10 top-0 absolute bg-midnight mb-3"></div>
         <h1 class="text-midnight font-bold text-2xl sm:text-4xl mb-2">
@@ -175,7 +222,7 @@
       </div>
       <div class="relative p-5 group">
         <div class="absolute top-0 left-5 h-2 w-10 bg-midnight"></div>
-        <h3 class="text-midnight font-black text-xl md:text-2xl mb-2 mt-3">
+        <h3 class="text-midnight font-black text-xl mb-2 mt-3">
           How we are organised
         </h3>
         <router-link to="/">
@@ -353,17 +400,17 @@
 import { ref } from "vue";
 
 const showSearch = ref(false);
+const showMenu = ref(false);
 function toggleSearch() {
   showSearch.value = !showSearch.value;
 }
+function toggleMenu() {
+  showMenu.value = !showMenu.value;
+}
+function closeMenu() {
+  showMenu.value = false;
+}
 
-const boxes = [
-  { title: "VAT refunds", icon: "/refund.svg", link: "#" },
-  { title: "Travel", icon: "/travel.svg", link: "#" },
-  { title: "Online shopping", icon: "/shopping.svg", link: "#" },
-  { title: "Gifts", icon: "/gift.svg", link: "#" },
-  { title: "If you move to Denmark", icon: "/personal.svg", link: "#" },
-];
 
 const aboutItems = [
   { title: "What we do", link: "About our task" },
