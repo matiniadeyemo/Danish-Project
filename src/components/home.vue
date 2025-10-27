@@ -1,9 +1,9 @@
 <template>
   <main class="bg-[#f6f6f6]">
     <header class="bg-white shadow-md flex flex-col inset-x-0 top-0 z-50">
-      <nav class="bg-midnight border-b-[5px] border-yellow-400">
+       <nav class="bg-midnight border-b-[5px] border-yellow-400 overflow-hidden">
         <div
-          class="flex flex-row justify-between items-center md:px-4 px-3 sm:px-8 py-2 max-w-7xl mx-auto"
+          class="flex flex-row justify-between  items-center md:px-4 px-3 sm:px-8 lg:h-[5rem] h-[50px] py-2 max-w-7xl mx-auto"
         >
         <div class="flex flex-row text-white">
           <img src="/logo.png" alt="logo" class="w-[8rem] lg:flex hidden" />
@@ -13,8 +13,9 @@
         </div>
           
           <div class="flex">
+            <div class="lg:hidden border-l border-gray-500 flex items-center h-[2rem] mt-5"></div>
             <button
-              class="lg:hidden text-sm text-white flex flex-col md:flex-row items-center justify-center align-center h-24px gap-2 p-3 transition-all duration-300 border border-[2px] border-[#14143c] hover:border-[#72728a] hover:border-[2px]
+              class="lg:hidden text-sm text-white flex flex-col md:flex-row items-center justify-center align-center  gap-2 p-3 transition-all duration-300 border border-[2px] border-[#14143c] hover:border-[#72728a] hover:border-[2px]
               " @click="toggleMenu"
             >
               <svg
@@ -31,7 +32,7 @@
               </svg>
               <p class="text-sm">Menu</p>
             </button>
-            
+            <div class="lg:hidden border-r border-gray-500 flex items-center h-[2rem] mt-5"></div>
              <button class="text-white text-sm flex flex-col md:flex-row items-center justify-center align-center h-24px gap-2 p-3 transition-all duration-300 border border-[2px] border-[#14143c] hover:border-[#72728a] hover:border-[2px]"  @click="toggleSearch()">
               <svg 
                 xmlns="http://www.w3.org/2000/svg" 
@@ -50,7 +51,6 @@
           </div>
         </div>
       </nav>
-
       <div class="text-gray-600 p-4 sm:p-6  sm:text-left">
         <h1 class="text-lg sm:text-xl font-medium">
           The Danish Customs Agency
@@ -128,35 +128,38 @@ class=""
         </a>
       </div>
       </router-link>
-     
-      <div class="group flex-shrink-0 min-w-[16rem] sm:min-w-[18rem] lg:min-w-0 flex flex-col justify-start items-start p-4 rounded-lg transition">
+     <router-link to="/Travel">
+       <div class="group flex-shrink-0 min-w-[16rem] sm:min-w-[18rem] lg:min-w-0 flex flex-col justify-start items-start p-4 rounded-lg transition">
         <img src="/travel.svg" alt="Travel" class="w-[10rem] h-auto mb-4" />
         <a href="#" class="font-semibold text-midnight underline underline-offset-4 hover:decoration-[3px] group-hover:decoration-[3px] transition-all duration-150">
           Travel
         </a>
       </div>
-
-      <div class="group flex-shrink-0 min-w-[16rem] sm:min-w-[18rem] lg:min-w-0 flex flex-col justify-start items-start p-4 rounded-lg transition">
+     </router-link>
+     <router-link to="/Online">
+          <div class="group flex-shrink-0 min-w-[16rem] sm:min-w-[18rem] lg:min-w-0 flex flex-col justify-start items-start p-4 rounded-lg transition">
         <img src="/shopping.svg" alt="Online shopping" class="w-[10rem] h-auto mb-4" />
         <a href="#" class="font-semibold text-midnight underline underline-offset-4 hover:decoration-[3px] group-hover:decoration-[3px] transition-all duration-150">
           Online shopping
         </a>
       </div>
-
-      <div class="group flex-shrink-0 min-w-[16rem] sm:min-w-[18rem] lg:min-w-0 flex flex-col justify-start items-start p-4 rounded-lg transition">
+     </router-link>
+     <router-link to="/gift">
+        <div class="group flex-shrink-0 min-w-[16rem] sm:min-w-[18rem] lg:min-w-0 flex flex-col justify-start items-start p-4 rounded-lg transition">
         <img src="/gift.svg" alt="Gifts" class="w-[10rem] h-auto mb-4" />
         <a href="#" class="font-semibold text-midnight underline underline-offset-4 hover:decoration-[3px] group-hover:decoration-[3px] transition-all duration-150">
           Gifts
         </a>
       </div>
-
-      <div class="group flex-shrink-0 min-w-[16rem] sm:min-w-[18rem] lg:min-w-0 flex flex-col justify-start items-start p-4 rounded-lg transition">
+     </router-link>
+     <router-link to="/move">
+          <div class="group flex-shrink-0 min-w-[16rem] sm:min-w-[18rem] lg:min-w-0 flex flex-col justify-start items-start p-4 rounded-lg transition">
         <img src="/personal.svg" alt="If you move to Denmark" class="w-[10rem] h-auto mb-4" />
         <a href="#" class="font-semibold text-midnight underline underline-offset-4 hover:decoration-[3px] group-hover:decoration-[3px] transition-all duration-150">
           If you move to Denmark
         </a>
       </div>
-
+     </router-link>
     </div>
   </div>
 </div>
