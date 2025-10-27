@@ -1,0 +1,740 @@
+<template>
+    <header class="bg-white shadow-md flex flex-col inset-x-0 top-0 z-50">
+      <nav class="bg-midnight border-b-[5px] border-yellow-400 overflow-hidden">
+        <div
+          class="flex flex-row justify-between  items-center md:px-4 px-3 sm:px-8 lg:h-[5rem] h-[50px] py-2 max-w-7xl mx-auto"
+        >
+        <div class="flex flex-row text-white">
+          <img src="/logo.png" alt="logo" class="w-[8rem] lg:flex hidden" />
+          <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve"  fill="currentColor"
+        style="enable-background:new 0 0 24.3 22.6" viewBox="0 0 24.3 22.6" class="lg:hidden w-[2rem]"><path d="M3.4 19.1h17.5v1.2H3.4zM3.4 21.3h17.5v1.2H3.4zM7.1 18h1.4c.1-1 .5-2 .3-2.7-.3-.9-1.4-1.8-2.1-2.5-.6-.6-.9-1.1-.9-1.9 0-.8.7-1.6 1.7-1.6 1.1 0 1.8 1.1 3.2 1.1V9.1C9.8 9 9 8 7.4 8c-.9 0-1.6.3-2.2.9-.5.5-.8 1.3-.8 2.1 0 1.2.6 1.9 1.2 2.7.7.8 1.5 1.9 1.5 4.3M21.4 9.9c.6 0 1.6.4 1.6 1.6 0 1-.8 1.5-1.1 1.8-.8.8-1.7 1.5-2.1 2.2-.4.7-.1 1.8-.1 2.4H21c.1-1.7.9-2.6 1.7-3.5.8-.8 1.7-1.6 1.7-3 0-2.1-1.7-2.9-2.9-2.9-.4 0-.8.1-1.2.2.3.4.4.8.5 1.2.1.1.3 0 .6 0M13.7 10.3c1.4 0 2.1-1.1 3.2-1.1 1 0 1.7.8 1.7 1.6s-.3 1.3-.9 1.9c-.7.7-1.8 1.7-2.1 2.5-.3.8.2 1.7.3 2.7h1.4c0-2.5.8-3.6 1.5-4.5.6-.7 1.2-1.5 1.2-2.7 0-.8-.3-1.5-.8-2.1-.7-.3-1.5-.6-2.3-.6-1.6 0-2.4 1-3.2 1.1v1.2zM11.5 8.1v3.7c0 2.4-.6 3-.6 3.8 0 1 .4 1.3.6 2.4h1.3c.2-1.1.6-1.4.6-2.4 0-.8-.6-1.4-.6-3.8V8.1h-1.3zM11.5 3.9c-.7.2-1.2.9-1.2 1.7 0 1 .8 1.8 1.8 1.8s1.8-.8 1.8-1.8c0-.8-.5-1.5-1.2-1.7V2.5H14V1.4h-1.3V0h-1.2v1.4h-1.3v1.2h1.3v1.3zm.6 1c.4 0 .7.3.7.7 0 .4-.3.7-.7.7-.4 0-.7-.3-.7-.7 0-.4.3-.7.7-.7" class="logo-crown_svg__st3"></path><path d="M3.4 18h1.3c0-.6.3-1.8-.1-2.4-.4-.7-1.3-1.4-2.1-2.2-.3-.3-1.1-.9-1.1-1.8 0-1.3.9-1.6 1.6-1.6.2 0 .5 0 .7.1.1-.4.3-.9.5-1.2-.5-.2-.9-.3-1.3-.3-1.2.1-2.9.9-2.9 3 0 1.4.9 2.2 1.7 3 .8.9 1.6 1.7 1.7 3.4" class="logo-crown_svg__st3">
+        </path></svg>
+        </div>
+          
+          <div class="flex">
+            <div class="lg:hidden border-l border-gray-500 flex items-center h-[2rem] mt-5"></div>
+            <button
+              class="lg:hidden text-sm text-white flex flex-col md:flex-row items-center justify-center align-center  gap-2 p-3 transition-all duration-300 border border-[2px] border-[#14143c] hover:border-[#72728a] hover:border-[2px]
+              " @click="toggleMenu"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+                class="w-5 h-5"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M3 5h18v2H3V5zm0 6h18v2H3v-2zm0 6h18v2H3v-2z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+              <p class="text-sm">Menu</p>
+            </button>
+            <div class="lg:hidden border-r border-gray-500 flex items-center h-[2rem] mt-5"></div>
+             <button class="text-white text-sm flex flex-col md:flex-row items-center justify-center align-center h-24px gap-2 p-3 transition-all duration-300 border border-[2px] border-[#14143c] hover:border-[#72728a] hover:border-[2px]"  @click="toggleSearch()">
+              <svg 
+                xmlns="http://www.w3.org/2000/svg" 
+                viewBox="0 0 24 24" 
+                fill="currentColor" 
+                class="w-5 h-5"
+              >
+                <path 
+                  fill-rule="evenodd" 
+                  d="M10 2a8 8 0 015.293 13.707l4 4a1 1 0 01-1.414 1.414l-4-4A8 8 0 1110 2zm0 2a6 6 0 100 12 6 6 0 000-12z" 
+                  clip-rule="evenodd" 
+                />
+              </svg>
+              <p class="text-sm">Search</p>  
+            </button>
+          </div>
+        </div>
+      </nav>
+ 
+    <div class="flex flex-wrap w-80% gap-4 lg:flex md:flex sm:flex p-4  text-sm md:text-base text-midnight "
+>
+  <router-link to="/">
+    <h1
+      class="text-base sm:text-lg underline-offset-4 hover:underline text-center sm:text-left"
+    >
+      The Danish Customs Agency
+    </h1>
+  </router-link>
+
+  <router-link
+    to="/"
+    class="flex text-base sm:text-lg underline-offset-4 items-center justify-center sm:justify-start gap-2 hover:underline underline-offset-2 group"
+  >
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 8 12"
+      fill="none"
+      class="w-3 h-3 stroke-[#14143c] stroke-[2.5] transition-transform duration-200"
+    >
+      <path
+        d="M1 1l5 5-5 5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </svg>
+    <p>Individuals</p>
+  </router-link>
+
+  <router-link
+    to="/"
+    class="flex text-base sm:text-lg text-gray-600 underline-offset-4 items-center justify-center sm:justify-start gap-2 hover:underline underline-offset-2 group"
+  >
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 8 12"
+      fill="none"
+      class="w-3 h-3 stroke-[#14143c] stroke-[2.5] transition-transform duration-200 group-hover:translate-x-1"
+    >
+      <path
+        d="M1 1l5 5-5 5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </svg>
+    <p>VAT refunds</p>
+  </router-link>
+   </div>
+
+    </header>
+    <div
+      v-if="showSearch"
+      class="fixed inset-0 flex justify-center items-center bg-black/40 z-[100]"
+    >
+      <div
+        class="bg-white w-[90%] sm:w-[30rem] h-[20rem] rounded-lg relative shadow-lg flex flex-col justify-center items-center"
+      >
+        <button
+          @click="toggleSearch"
+          class="absolute top-3 right-3 bg-midnight text-white w-[2.5rem] h-[2.5rem] flex justify-center items-center rounded-md"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="currentColor"
+            viewBox="0 0 16 16"
+            class="w-4 h-4"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"
+              clip-rule="evenodd"
+            />
+          </svg>
+        </button>
+        <h1 class="text-gray-800 text-lg font-semibold mt-8 text-center">
+          Search functionality placeholder
+        </h1>
+      </div>
+    </div>
+     <transition name="slide-fade" class="fixed w-[90%] h-full z-50 top-0 right-0 left-0 bottom-0 bg-white text-midnight flex flex-col gap-3   border-t border-gray-200 shadow-md lg:hidden">
+      <div
+    v-if="showMenu"
+    class=""
+    >   
+        <div class="flex flex-row justify-between  ">
+                <div class="p-8">
+                     <svg xmlns="http://www.w3.org/2000/svg" width="108" height="30" fill="none"><g clip-path="url(#logo-toldst-dark_svg__a)"><path fill="#A3928F" d="m22.898 28.41 1.59-2.014c.637.53 1.803 1.272 2.969 1.272s1.59-.318 1.59-.848c0-1.696-6.043-.106-6.043-3.816 0-1.909 1.803-3.393 4.347-3.393 1.802 0 3.074.742 3.816 1.378l-1.59 1.909c-.424-.424-1.484-.954-2.438-.954-1.06 0-1.484.318-1.484.742 0 1.378 6.042 0 6.042 3.922 0 1.908-1.696 3.604-4.558 3.604-1.484-.212-3.075-.742-4.24-1.802ZM46.539 19.824l-2.014 3.922-2.015-3.922H32.016v2.332h3.074v7.739h2.756v-7.739h2.968l2.226 4.135v3.604h2.863V26.29l3.498-6.467h-2.862ZM50.248 19.824h4.876c2.544 0 3.923 1.378 3.923 3.392 0 1.272-.742 2.333-1.908 2.969l2.12 3.71h-3.075l-1.696-3.18h-1.484v3.18h-2.756v-10.07Zm2.756 2.332v2.227h2.12c.742 0 1.166-.53 1.166-1.167 0-.53-.318-1.06-1.166-1.06h-2.12ZM60.85 19.824h7.526v2.438h-4.77v1.378h3.922v2.333h-3.922v1.59h4.982v2.332H60.85v-10.07ZM77.81 29.895h-7.314v-10.07h2.756v7.738h4.559v2.332ZM78.871 28.41l1.59-2.014c.636.53 1.802 1.272 2.968 1.272s1.59-.318 1.59-.848c0-1.696-6.042-.106-6.042-3.816 0-1.909 1.802-3.393 4.346-3.393 1.803 0 3.075.742 3.817 1.378l-1.59 1.909c-.424-.424-1.485-.954-2.439-.954-1.06 0-1.484.318-1.484.742 0 1.378 6.043 0 6.043 3.922 0 1.908-1.696 3.604-4.559 3.604-1.59-.212-3.18-.742-4.24-1.802ZM89.47 19.824h7.527v2.438h-4.77v1.378h3.922v2.333h-3.922v1.59h4.982v2.332h-7.738v-10.07ZM99.012 19.824h2.544l3.392 5.407v-5.407h2.65v10.07h-2.544l-3.392-5.405v5.406h-2.65v-10.07Z"></path><path fill="#14143C" d="M23.004 7.207h8.798v2.332h-2.968v7.739h-2.756V9.539H23.11V7.207h-.106ZM32.44 12.296c0-3.498 2.756-5.194 5.512-5.194s5.512 1.802 5.512 5.194c0 3.286-2.544 5.194-5.512 5.194-2.862 0-5.512-1.908-5.512-5.194Zm8.268 0c0-1.908-1.272-2.756-2.756-2.756-1.484 0-2.756.954-2.756 2.756 0 1.696 1.378 2.862 2.756 2.862s2.756-1.166 2.756-2.862ZM52.58 17.278h-7.314V7.207h2.756v7.738h4.558v2.333ZM58.197 7.207c2.226 0 5.195 1.06 5.195 5.088 0 3.923-2.969 4.983-5.195 4.983h-4.24V7.207h4.24Zm-1.484 2.332v5.406h1.59c.742 0 2.333-.53 2.333-2.65s-1.59-2.756-2.333-2.756h-1.59ZM3.392 13.675c0-.425.106-1.273-.106-1.697-.318-.53-.848-1.06-1.484-1.59-.318-.212-.848-.636-.848-1.272 0-.954.636-1.166 1.166-1.166.212 0 .318 0 .53.106.106-.318.212-.636.424-.848-.424-.212-.636-.212-.954-.212-.848 0-2.12.636-2.12 2.12 0 .954.636 1.59 1.166 2.12.636.636 1.166 1.272 1.272 2.544h.954v-.105ZM15.37 14.734H2.438v.848H15.37v-.848ZM15.37 16.537H2.438v.848H15.37v-.848ZM15.688 6.996c-.318 0-.53 0-.848.106.212.212.318.53.424.848.106 0 .318-.106.53-.106.424 0 1.166.212 1.166 1.166 0 .636-.53 1.06-.742 1.272-.636.53-1.166 1.06-1.484 1.59-.212.424-.212 1.273-.106 1.697h.954c.106-1.273.636-1.909 1.272-2.545.53-.53 1.166-1.166 1.166-2.12-.212-1.272-1.378-1.908-2.332-1.908ZM9.328 13.675c.106-.742.424-1.06.424-1.696 0-.53-.318-.954-.318-2.757v-2.65H8.48v2.65c0 1.697-.318 2.12-.318 2.757 0 .742.212.954.424 1.696h.742ZM5.3 13.675h.955c.106-.742.318-1.378.106-1.908-.212-.636-.954-1.272-1.484-1.803-.318-.424-.53-.848-.53-1.378 0-.636.424-1.166 1.166-1.166.848 0 1.06.742 2.12.742v-.848c-.636-.106-.954-.742-2.12-.742-.636 0-1.166.212-1.59.636-.318.318-.53.848-.53 1.378 0 .848.424 1.378.848 1.909.53.636 1.06 1.484 1.06 3.18ZM10.282 8.163c.954 0 1.272-.742 2.12-.742.742 0 1.166.53 1.166 1.166 0 .53-.212.954-.636 1.378-.53.53-1.272 1.166-1.484 1.802-.212.53 0 1.166.106 1.908h.954c0-1.802.53-2.544 1.06-3.18.424-.53.848-1.06.848-1.908 0-.53-.212-1.06-.53-1.484-.424-.424-.954-.636-1.59-.636-1.166 0-1.484.742-2.12.742v.954h.106ZM7.42 4.134c0 .848.636 1.484 1.484 1.484s1.484-.636 1.484-1.484c0-.636-.424-1.272-1.06-1.378v-.954h.954V.954h-.954V0H8.48v.954h-.954v.848h.954v.848c-.636.212-1.06.848-1.06 1.484Zm1.484-.742c.424 0 .742.318.742.742a.725.725 0 0 1-.742.742.725.725 0 0 1-.742-.742c0-.424.318-.742.742-.742Z"></path></g><defs><clipPath id="logo-toldst-dark_svg__a"><path fill="#fff" d="M0 0h107.597v30H0z"></path></clipPath></defs></svg>
+                </div>
+             <button class="text-midnight text-sm flex top-0 bottom-0 md:flex-row items-center justify-center align-center w-[3rem] h-[5.6rem] gap-2 p-3 transition-all duration-300 border border-[2px] border-white hover:border-[#14143c] hover:border-[2px]"  @click="closeMenu()">
+             <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="12.7" height="12.7" style="enable-background:new 0 0 12.7 12.7"><path d="M12.7 1.4 11.3 0 6.4 4.9 1.4 0 0 1.4l4.9 5L0 11.3l1.4 1.4 5-4.9 4.9 4.9 1.4-1.4-4.9-4.9z" style="fill:#14143c"></path></svg>
+            </button>
+        </div>
+        <div class="border-t border-gray-300 mt-[-1rem] mb-2"></div>
+        <div class="flex flex-col gap-4 px-6">
+        <router-link to="/" class="hover:text-yellow-600">Home</router-link>
+        <router-link to="/about" class="hover:text-yellow-600" >About Us</router-link>
+        <router-link to="/contact" class="hover:text-yellow-600" >Contact</router-link>
+        </div>
+        <div class="border-t border-gray-300 my-2"></div>
+
+        <div class="flex flex-col gap-2 px-6">
+            <p class="text-sm font-semibold text-gray-500 uppercase">Languages</p>
+            <router-link to="/" class="hover:text-yellow-600">Dansk</router-link>
+            <router-link to="/" class="hover:text-yellow-600" >English</router-link>
+        </div>
+        </div>
+
+    </transition>
+    <section class="lg:p-7 p-0 mt-6 sm:px-7 flex  gap-[2rem] lg:gap-0 flex-col lg:flex-row justify-between md:gap-[3rem]">
+        <div class="bg-white shadow-sm border flex flex-col gap-2  min-h-[25rem lg:w-[58rem] lg:min-h-[82rem]" >
+            <div class="">
+                <article class="relative p-3 pl-5 flex flex-col gap-4 text-midnight">
+                <div class="absolute top-0 left-5 h-2 w-10 bg-midnight"></div>
+                <div class="px-5 flex flex-col justify-between lg:gap-2 gap-3">
+                     <h1 class="lg:text-4xl text-3xl lg:w-[70%]  lg:font-extrabold font-bold text-midnidnight mt-[1rem]">VAT refunds for tourists from non-EU countries</h1>
+                     <p class="lg:text-[1.3rem] text-[1.1rem] text-base">When you are a tourist in Denmark who are living outside the EU,
+                    you have the opportunity to get a VAT refund for goods purchased
+                    during your stay.</p>
+                </div>
+                    <div class="lg:p-7 p-3">
+                    <p class="lg:text-[1.2rem] text-base">In order to be considered a tourist, you must:</p>
+                    <ul class="list-disc p-6 pl-[2rem] text-lg flex flex-col gap-[0.3rem] text-midnight">
+                        <li>travel to Denmark on holiday from your place of residence outside the EU and go back again when your holiday is over. If you have studied or worked in Denmark or another EU country, for example as an au pair, or if you are stationed in Denmark, you cannot obtain a VAT refund as your stay is not regarded as holiday.</li>
+                        <li>be a non-EU resident. If your official address is in Denmark or another EU country, you cannot obtain a VAT refund.</li>
+                    </ul>
+                    <p class="lg:text-[1.2rem] text-base">Furthermore, the following three conditions must be met:</p>
+                    <ul class="list-disc p-6 pl-[2rem] text-lg flex flex-col gap-[0.3rem] text-midnight ">
+                        <li>The goods must be transported to a location outside the EU before the end of the third month after the month of purchase. If, for example, you purchased the goods on the 4th of March, the goods must be taken out of Denmark before the end of June.</li>
+                        <li>The value of the goods must be more than DKK 300. (For Norway and the Åland islands, the amount is DKK 1,200. See special information in the section How to obtain a VAT refund - if you live in Norway or on the Aaland Islands).</li>
+                        <li>You must take the goods with you when departing from Denmark or send them to a country outside the EU.</li>
+                    </ul>
+                    <p class="lg:text-[1.1rem] text-base  mb-2">In Denmark, VAT normally corresponds to 20% of the sales price. If the price is quoted exclusive of VAT, VAT is charged at a rate of 25% of the price.</p>
+                    <p class="lg:text-[1.1rem] text-base  mb-4">The rules regarding VAT refunds do not apply when you have purchased goods from a Danish online shop charging Danish VAT. You must therefore buy the goods in person in a brick-and-mortar store.</p>
+                </div>
+                </article>
+                <div class="">
+
+               <div class="group relative border-t border-midnight transition-all duration-500 ease-in-out"
+                    :class="{ 'border-t-[4px] border-midnight': Accord === 1 }"
+                  >
+                    <button
+                    class="w-full flex gap-[0.7rem] items-center p-5 text-left lg:text-2xl text-[1.4rem] lg:font-extrabold font-bold text-midnight  transition"
+                    @click="toggleAccordion(1)":aria-expanded="Accord === 1"
+                    >
+                    <svg
+                        id="arrow-1"
+                        class="w-5 h-5 transform transition-transform duration-300"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                    >
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                    <span>How to receive a VAT refund</span>
+
+                    </button>
+                    <div id="content-1" v-if="Accord  === 1" class="p-7 text-lg  flex flex-col gap-[0.5rem] text-[#0A0A3D]/80 overflow-hidden transition-all duration-500 ease-in-out"
+>
+                    <p>
+                        Please be aware that shops are not obliged to assist you in obtaining a VAT refund. You may therefore want to make an arrangement with the shop. If the shop is not willing to assist you, you will not be able to obtain a refund.
+                    </p>
+                    <p>There are three things you must do to obtain a VAT refund:</p>
+                    <div class="group relative border-t border-midnight transition-all duration-500 ease-in-out"
+                    :class="{ 'border-t-[4px] border-midnight': cord === 1 }">
+                    <button
+                    class="w-full flex gap-[0.7rem] items-center p-5 text-left text-xl font-extrabold text-midnight  transition"
+                     @click="sectionToggle(1)":aria-expanded="cord === 1"
+                    >
+                    <svg
+                        id="arrow-1"
+                        class="w-5 h-5 transform transition-transform duration-300"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                    >
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                    <span>1. Obtain an invoice from the shop</span>
+                    </button>
+                  <div id="content-1" v-if="cord  === 1" class="p-5 text-lg  flex flex-col gap-[0.5rem] text-midnight overflow-hidden transition-all duration-500 ease-in-out">
+                       <p>You must obtain an invoice from the shop. The invoice must contain the following details:</p>
+                       <ul class="list-disc pl-8">
+                        <li>Date of issue</li>
+                        <li>Name and address of the shop</li>
+                        <li>VAT registration no. of the shop</li>
+                        <li>Your name and address abroad</li>
+                        <li>Quantity, type and value of goods (sales price incl. VAT and the VAT amount).</li>
+                       </ul>
+                       <p>You must document that you reside outside the EU and show your passport or other form of ID to the shop.</p>
+                    </div>
+                    </div>
+                    <div class="group relative border-t border-midnight transition-all duration-500 ease-in-out"
+                    :class="{ 'border-t-[4px] border-midnight': cord === 2 }">
+                    <button
+                    class="w-full flex gap-[0.7rem] items-center p-5 text-left text-xl font-extrabold text-midnight  transition"
+                    @click="sectionToggle(2)":aria-expanded="cord === 2"
+                    >
+                    <svg
+                        id="arrow-1"
+                        class="w-5 h-5 transform transition-transform duration-300"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                    >
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                    <span>2. Send or take the goods with you when departing from Denmark</span>
+                    </button>
+                    <div id="content-1" v-if="cord  === 2" class="pt-2 pl-10 pb-5 text-lg  flex flex-col gap-[0.5rem] text-midnight overflow-hidden transition-all duration-500 ease-in-out">
+                       <p>You are entitled to a VAT refund whether you take the goods with you or send them home.</p>
+                       <strong class="text-extrabold text-midnight">If you take the goods with you when departing from Denmark</strong>
+                       <ul class="list-disc pl-8">
+                        <li>Passport</li>
+                        <li>Ticket or itinerary</li>
+                        <li>Documentation for non-EU residency</li>
+                        <li>The goods.</li>
+                       </ul>
+                       <p>The stamp must be obtained immediately before leaving Denmark on the date of departure.</p>
+                       <p>If you travel from Denmark to another EU country before leaving the EU, the customs authorities in that EU country must stamp your invoice. This applies irrespective of whether you travel by plane, car, train or ferry.</p>
+                       <p>If you are travelling via multiple airports, the customs authorities in the last airport before you leave the EU must stamp your invoice, unless you have checked in the goods for your final destination outside the EU. If this is the case, the Danish customs authorities must stamp your invoice.</p>
+                       <h1 class=" text-xl font-extrabold text-midnight">If you send the goods from Denmark</h1>
+                       <p>If you send the goods, you must obtain documentation or a certificate from the customs authorities or from another competent authority in your own country to document that the goods have been imported into the country.</p>
+                      </div>
+                    </div>
+                    <div class="group relative border-t border-b border-midnight transition-all duration-500 ease-in-out"
+                    :class="{ 'border-t-[4px] border-midnight': cord === 3 }">
+                    <button
+                    class="w-full flex gap-[0.7rem] items-center p-5 text-left text-xl font-extrabold text-midnight  transition"
+                    @click="sectionToggle(3)":aria-expanded="cord === 3"
+                    >
+                    <svg
+                        id="arrow-1"
+                        class="w-5 h-5 transform transition-transform duration-300"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                    >
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                    <span>3. Send the invoice to the shop</span>
+                    </button>
+                    <div id="content-1" v-if="cord  === 3" class="pt-2 pl-10 pb-5 text-lg  flex flex-col gap-[0.5rem] text-midnight overflow-hidden transition-all duration-500 ease-in-out">
+                      <p>Once the invoice has been stamped, or you have obtained documentation or a certificate, you must send the invoice or the documentation/certificate to the shop where you bought the goods. The shop will then refund the VAT amount.</p>
+                    </div>
+                    </div>
+                    </div>
+                </div>
+                <div class="group relative border-t border-midnight transition-all duration-500 ease-in-out"
+                    :class="{ 'border-t-[4px] border-midnight': Accord === 2 }">
+                    <button
+                    class="w-full flex gap-[0.7rem] items-center p-5 text-left tlg:text-2xl text-[1.4rem] lg:font-extrabold font-bold text-midnight  transition"
+                     @click="toggleAccordion(2)":aria-expanded="Accord === 2"
+                    >
+                    <svg
+                        id="arrow-2"
+                        class="w-[3rem] h-10 lg:w-5 lg:h-5 transform transition-transform duration-300"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                    >
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                    <span>How to obtain a VAT refund - if you live in Norway or on the Aaland islands</span>
+                    
+                    </button>
+                    <div id="content-2" v-if="Accord === 2" class="p-7 text-lg flex flex-col gap-[1rem]  text-[#0A0A3D]/80 overflow-hidden transition-all duration-500 ease-in-out"
+>
+                    <p>Special rules apply to VAT refunds for goods transported to Norway or the Aaland islands from an EU country.</p>
+                    <p>You are entitled to a refund of Danish VAT if the sales price of the individual goods exceeds DKK 1,200 inclusive of VAT. A group of items normally sold together is considered to be one item, e.g. cutlery and dinner sets.</p>
+                    <p>In order to obtain a VAT refund, you must have paid VAT in Norway/on the Aaland islands. The goods must also be transported before the end of the third month after the month of purchase.</p>
+                    <p>There are three things you must do to obtain a VAT refund if you live in Norway or on the Aaland Islands:</p>
+                     <div class="group relative border-t border-midnight transition-all duration-500 ease-in-out"
+                    :class="{ 'border-t-[4px] border-midnight': cord === 4 }">
+                    <button
+                    class="w-full flex gap-[0.7rem] items-center p-5 text-left text-xl font-extrabold text-midnight  transition"
+                    @click="sectionToggle(4)":aria-expanded="cord === 4"
+                    >
+                    <svg
+                        id="arrow-1"
+                        class="w-5 h-5 transform transition-transform duration-300"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                    >
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                    <span>1. Obtain an invoice from the shop</span>
+                    </button>
+                    <div id="content-2" v-if=" cord === 4" class="pt-4 pb-5 pl-10 text-lg flex flex-col gap-[1rem]  text-midnight overflow-hidden transition-all duration-500 ease-in-out">
+                    <p>
+                      When you buy the goods, the shop must issue an invoice stating:
+                    </p>
+                    <ul class="list-disc pl-8">
+                        <li>Date of issue</li>
+                        <li>Name and address of the shop</li>
+                        <li>Your name and address abroad</li>
+                        <li>Quantity, type and value of goods (sales price incl. VAT and the VAT amount).</li>
+                        <li>That the goods will be transported to Norway or the Aaland Islands.</li>
+                        <li>You must document your residence in Norway or on the Aaland Islands to the shop by showing your passport or other form of ID.</li>
+                       </ul>
+                    </div>
+                    </div>
+                    <div class="group relative border-t border-midnight transition-all duration-500 ease-in-out"
+                    :class="{ 'border-t-[4px] border-midnight': cord === 5 }">
+                    <button
+                    class="w-full flex gap-[0.7rem] items-center p-5 text-left text-xl font-extrabold text-midnight  transition"
+                    @click="sectionToggle(5)":aria-expanded="cord === 5"
+                    >
+                    <svg
+                        id="arrow-1"
+                        class="w-[2.7rem] h-10 lg:w-5 lg:h-5 transform transition-transform duration-300"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                    >
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                    <span>2. Send or take the goods with you when departing from Denmark</span>
+                    </button>
+                     <div id="content-2" v-if=" cord === 5" class="pt-4 pb-5 pl-10 text-lg flex flex-col gap-[1rem]  text-midnight overflow-hidden transition-all duration-500 ease-in-out">
+                    <p>
+                     Before you can obtain a VAT refund, you must obtain a receipt or a certificate stating that VAT has been collected in Norway or on the Aaland Islands. How you do this depends on whether you carry the goods yourself, or send them.
+                    </p>
+                    <div class="flex flex-col">
+                      <strong class="font-extrabold text-xl">
+                      If you take the goods with you when departing from Denmark 
+                    </strong>
+                    <p>You do not need to contact the customs authorities in Denmark or in another EU country if you carry the goods in your personal luggage when leaving the EU.</p>
+                    </div>
+                    <p>What you must do is contact the customs authorities in Norway or on the Aaland Islands which may collect VAT on entry. The authorities issue a receipt that VAT has been collected and may sign the invoice.</p>
+                    <div class="flex flex-col">
+                      <strong class="font-extrabold text-xl">
+                     If you send the goods
+                    </strong>
+                   <p>If you send the goods, you must make sure that you get an import certificate from the customs authorities or other VAT collection authority in Norway or on the Aaland Islands.</p>
+                    </div>
+                    <p>The documentation must show that the goods have entered the country and that VAT will be collected in Norway or on the Aaland Islands.</p>
+                    </div>
+                    </div>
+                    <div class="group relative border-t border-midnight transition-all duration-500 ease-in-out"
+                    :class="{ 'border-t-[4px] border-midnight': cord === 6 }">
+                    <button
+                    class="w-full flex gap-[0.7rem] items-center p-5 text-left text-xl font-extrabold text-midnight  transition"
+                    @click="sectionToggle(6)":aria-expanded="cord === 6"
+                    >
+                    <svg
+                        id="arrow-1"
+                        class="w-5 h-5 transform transition-transform duration-300"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                    >
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                    <span>3. Send the invoice to the shop</span>
+                    </button>
+                    <div id="content-1" v-if="cord  === 6" class="pt-2 pl-10 pb-5 text-lg  flex flex-col gap-[0.5rem] text-midnight overflow-hidden transition-all duration-500 ease-in-out">
+                      <p>Once back in Norway or on the Aaland Islands, you must send the invoice and the authorities' receipt (possibly in the form of a photocopy) documenting that you have paid VAT in your home country to the shop where you bought the goods. The shop will then send the VAT amount to you.</p>
+                    </div>
+                    </div>
+                </div>
+                </div>
+                <div class="group relative border-t border-midnight transition-all duration-500 ease-in-out"
+                    :class="{ 'border-t-[4px] border-midnight': Accord === 3 }">
+                    <button
+                     class="w-full flex gap-[0.7rem] items-center p-5 text-left lg:text-2xl text-[1.4rem] lg:font-extrabold font-bold text-midnight  transition"
+                     @click="toggleAccordion(3)":aria-expanded="Accord === 3"
+                    >
+                    <svg
+                        id="arrow-3"
+                        class="w-5 h-5 transform transition-transform duration-300"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                    >
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                    <span>Special tourist sales schemes</span>
+                    
+                    </button>
+                    <div id="content-3" v-if="Accord  === 3" class="p-7 flex flex-col gap-[0.5rem] text-[#0A0A3D]/80 text-lg overflow-hidden transition-all duration-500 ease-in-out"
+>
+                    <p>The following companies can help you obtain a VAT refund when you shop at shops which are affiliated with the various schemes:</p>
+                    <p><strong class="text-midnight">Global Blue:</strong> Find information about opening hours, refunds and contact information at <a href="" class="underline hover:decoration-[3px] underline-offset-2">www.globalblue.com</a> or call +45 32 50 29 23 (airport) or +45 32 52 55 66 (head office).</p>    
+                    <p ><strong class="text-midnight">Tax-Free Worldwide:</strong> Find information about opening hours, refunds and contact information at  <a href="" class="underline hover:decoration-[3px] underline-offset-2">www.taxfreeworldwide.com</a> or call +45 70 27 78 44</p>
+                </div>
+                </div>
+                <div class="group relative border-t border-midnight transition-all duration-500 ease-in-out"
+                    :class="{ 'border-t-[4px] border-midnight': Accord ===  4}">
+                    <button
+                    class="w-full flex gap-[0.7rem] items-center p-5 text-left lg:text-2xl text-[1.4rem] lg:font-extrabold font-bold text-midnight  transition"
+                     @click="toggleAccordion(4)":aria-expanded="Accord === 4"
+                    >
+                    <svg
+                        id="arrow-4"
+                        class="w-[2rem] h-10 lg:w-5 lg:h-5 transform transition-transform duration-300"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                    >
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                    <span>EU countries and territories outside the EU</span>
+                    
+                    </button>
+                    <div id="content-4" v-if="Accord === 4" class="p-7 flex flex-col gap-[1rem] text-lg text-[#0A0A3D]/80 overflow-hidden transition-all duration-500 ease-in-out"
+>
+                    <p>Apart from Denmark, the following countries are members of the EU: Austria, Belgium, Bulgaria, Croatia, Cyprus, the Czech Republic, Estonia, Finland, France, Germany, Greece, Hungary, Ireland, Italy, Latvia, Lithuania, Luxembourg, Malta, the Netherlands, Poland, Portugal, Romania, Slovakia, Slovenia, Spain, and Sweden.</p>
+                    <p>Monaco and the Isle of Man are considered to be part of the EU for VAT purposes.</p>    
+                    <p>The following territories are considered to be outside the EU:</p>
+                    <ul class="list-disc pl-[3rem]">
+                        <li>The Faroe Islands and Greenland (Denmark)</li>
+                        <li>The island of Helgoland and the Büsingen territory (Germany)</li>
+                        <li>Livigno, Campione d'Italia and the national waters of Lake Lugano (Italy) </li>
+                        <li>The Channel Islands (the United Kingdom)</li>
+                        <li>The Canary Islands, Ceuta and Melilla (Spain) </li>
+                        <li>The overseas departments (France)</li>
+                        <li>Mount Athos (Greece)</li>
+                        <li>The Aaland Islands (Finland)</li>
+                        <li>Andorra</li>
+                        <li>Gibraltar</li>
+                        <li>San Marino</li>
+                        <li>The Vatican City</li>
+                    </ul>
+                </div>
+                </div>
+                <div class="group relative border-t border-midnight transition-all duration-500 ease-in-out"
+                    :class="{ 'border-t-[4px] border-midnight': Accord ===  5}">
+                    <button
+                    class="w-full flex gap-[0.7rem] items-center p-5 text-left lg:text-2xl text-[1.4rem] lg:font-extrabold font-bold text-midnight  transition"
+                     @click="toggleAccordion(5)" :aria-expanded="Accord === 5"
+                    >
+                    <svg
+                        id="arrow-5"
+                        class="w-5 h-5 transform transition-transform duration-300"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                    >
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                    <span>More information</span>
+                    </button>
+                    <div id="content-5" v-if="Accord === 5" class="p-3 flex flex-col gap-[1rem] text-[#0A0A3D]/80 overflow-hidden transition-all duration-500 ease-in-out"
+>
+                    <p class="text-black">The Danish customs authorities can be found at the following points of departure:</p>
+                   <div class=" flex flex-col">
+                   <table class="text-midnight text-lg border-collapse border  w-full p-8">
+                    <thead class=" border border-r border-l-red-500 border-r-yellow-400 border-midnight">
+                        <tr>
+                        <th class="border border-b-[2px] border-midnight border-t  border-t-[2px]  p-9 border-r border-l-gray-200 border-r-gray-200 border-midnight"></th>
+                        <th class="border border-b-[2px] border-midnight  border-t  border-t-[2px] p-9 border-r border-l-gray-200 border-r-gray-200 border-midnight"></th>
+                        </tr>
+                    </thead>
+                    <tbody class="group hover:bg-gray-200">
+                        <tr>
+                        <td class="border pl-[3rem] border-gray-200 py-[1rem] group-hover:border-gray-200">
+                            <strong>Copenhagen Airport</strong>
+                            <p>Toldekspedition</p>
+                            <p>Københavns Lufthavn</p>
+                            <p>Terminal 3</p>
+                            <p>DK-2770 Kastrup</p>
+
+                        </td>
+                        
+                        <td class="border p-2 border-gray-200 pl-[3rem] group-hover:border-gray-200">
+                            <strong>Port of Sønder Frihavn</strong>
+                            <p>(Terminalen)</p>
+                            <p>Sønder Frihavn</p>
+                            <p>Dampfærgevej 30</p>
+                            <p>DK-2100 København Ø</p>
+                        </td>
+                        </tr>
+                    </tbody>
+                    <tbody class="group hover:bg-gray-200">
+                        <tr> 
+                            <td class="border pl-[3rem] border-gray-200 py-[1rem]">
+                            <strong>Billund Airport</strong>
+                            <p>Toldekspedition Billund</p>
+                            <p>Lufthavn</p>
+                            <p>Cargo Centervej 61</p>
+                            <p>DK-7190 Billund</p>
+                        </td>
+                         <td class="border p-2 border-gray-200 pl-[3rem]">
+                            <strong>Port of Frederikshavn</strong>
+                            <p>Toldekspedition</p>
+                            <p>Frederikshavn</p>
+                            <p>Færgehavnsvej 31</p>
+                            <p>DK-9900 Frederikshavn</p>
+                        </td>
+                        </tr>
+                    </tbody>
+                    <tbody class="group hover:bg-gray-200">
+                        <tr> 
+                            <td class="border pl-[3rem] border-gray-200 py-[1rem]">
+                            <strong>Bornholms Airport</strong>
+                            <p>Toldekspedition Bornholm</p>
+                            <p>Munch Petersens Vej 8</p>
+                            <p>DK-3700 Rønne</p>
+                        </td>
+                         <td class="border p-2 border-gray-200 pl-[3rem]">
+                            <strong>Port of Hirtshals</strong>
+                            <p>Toldekspedition Hirtshals</p>
+                            <p>Dalsagervej 3</p>
+                            <p>DK-9850 Hirtshals</p>
+                        </td>
+                        </tr>
+                    </tbody>
+                    <tbody class="group hover:bg-gray-200">
+                        <tr> 
+                            <td class="border pl-[3rem] border-gray-200 py-[1rem]">
+                            <strong>Port of Langelinie</strong>
+                            <p>SKAT Frihavnen</p>
+                            <p>Containervej 6</p>
+                            <p>DK-2100 København Ø</p>
+                        </td>
+                         <td class="border p-2 border-gray-200 pl-[3rem]"  >
+                        </td>
+                        </tr>
+                    </tbody>
+                    </table>
+
+                   </div>  
+                </div>
+                </div>
+                </div>
+            </div>
+        </div>
+        <div class="bg-white shadow-sm border flex flex-col gap-2 w-full lg:w-[21rem] h-[23rem] relative">
+            <div class="flex flex-col gap-3 p-5">
+            <span class="text-midnight text-xl font-bold">More about Individuals</span>
+            <div class="flex flex-col gap-[0.7rem]">
+            <router-link to="/Travel" class="flex items-center underline text-midnight hover:decoration-[3px] underline-offset-4">Travel</router-link>
+            <router-link to="/Online" class="flex items-center underline text-midnight hover:decoration-[3px] underline-offset-4">Online shopping</router-link>
+            <router-link to="/move" class="flex items-center underline text-midnight hover:decoration-[3px] underline-offset-4">If you move to Denmark</router-link>
+            <router-link to="/gift" class="flex items-center underline text-midnight hover:decoration-[3px] underline-offset-4">Gifts dispatched from countries outside the EU</router-link>
+            <router-link to="/Special" class="flex items-center underline text-midnight hover:decoration-[3px] underline-offset-4">Special rules for special items</router-link>
+            <div class="">
+                <div class="absolute lg:top-[16.9rem]  left-0 right-0 h-5 w-2 bg-midnight "></div>
+                <h1 class="text-lg text-midnidnight lg:mt-[0.5rem]">VAT refund</h1>
+            </div>
+            </div>
+            </div>
+        </div>
+    </section>
+
+    <footer
+      class="bg-midnight mt-20 text-white py-[2rem]  border-t-[5px] border-[#ffb81c]"
+    >
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="flex flex-col md:gap-[4rem] gap-[2rem] mb-[2rem] md:flex-row md:justify-start  md:text-left">
+       <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve"  fill="currentColor"
+        style="enable-background:new 0 0 24.3 22.6" viewBox="0 0 24.3 22.6" class="md:w-[4rem] w-[3rem]"><path d="M3.4 19.1h17.5v1.2H3.4zM3.4 21.3h17.5v1.2H3.4zM7.1 18h1.4c.1-1 .5-2 .3-2.7-.3-.9-1.4-1.8-2.1-2.5-.6-.6-.9-1.1-.9-1.9 0-.8.7-1.6 1.7-1.6 1.1 0 1.8 1.1 3.2 1.1V9.1C9.8 9 9 8 7.4 8c-.9 0-1.6.3-2.2.9-.5.5-.8 1.3-.8 2.1 0 1.2.6 1.9 1.2 2.7.7.8 1.5 1.9 1.5 4.3M21.4 9.9c.6 0 1.6.4 1.6 1.6 0 1-.8 1.5-1.1 1.8-.8.8-1.7 1.5-2.1 2.2-.4.7-.1 1.8-.1 2.4H21c.1-1.7.9-2.6 1.7-3.5.8-.8 1.7-1.6 1.7-3 0-2.1-1.7-2.9-2.9-2.9-.4 0-.8.1-1.2.2.3.4.4.8.5 1.2.1.1.3 0 .6 0M13.7 10.3c1.4 0 2.1-1.1 3.2-1.1 1 0 1.7.8 1.7 1.6s-.3 1.3-.9 1.9c-.7.7-1.8 1.7-2.1 2.5-.3.8.2 1.7.3 2.7h1.4c0-2.5.8-3.6 1.5-4.5.6-.7 1.2-1.5 1.2-2.7 0-.8-.3-1.5-.8-2.1-.7-.3-1.5-.6-2.3-.6-1.6 0-2.4 1-3.2 1.1v1.2zM11.5 8.1v3.7c0 2.4-.6 3-.6 3.8 0 1 .4 1.3.6 2.4h1.3c.2-1.1.6-1.4.6-2.4 0-.8-.6-1.4-.6-3.8V8.1h-1.3zM11.5 3.9c-.7.2-1.2.9-1.2 1.7 0 1 .8 1.8 1.8 1.8s1.8-.8 1.8-1.8c0-.8-.5-1.5-1.2-1.7V2.5H14V1.4h-1.3V0h-1.2v1.4h-1.3v1.2h1.3v1.3zm.6 1c.4 0 .7.3.7.7 0 .4-.3.7-.7.7-.4 0-.7-.3-.7-.7 0-.4.3-.7.7-.7" class="logo-crown_svg__st3"></path><path d="M3.4 18h1.3c0-.6.3-1.8-.1-2.4-.4-.7-1.3-1.4-2.1-2.2-.3-.3-1.1-.9-1.1-1.8 0-1.3.9-1.6 1.6-1.6.2 0 .5 0 .7.1.1-.4.3-.9.5-1.2-.5-.2-.9-.3-1.3-.3-1.2.1-2.9.9-2.9 3 0 1.4.9 2.2 1.7 3 .8.9 1.6 1.7 1.7 3.4" class="logo-crown_svg__st3">
+        </path></svg>
+        <p class="text-2xl  md:text-xl  font-normal text-white ">
+          We facilitate smooth trade across our exterior borders while ensuring effective customs control
+        </p>
+      </div>
+
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 text-sm md:text-base"
+        >
+          <div>
+            <h1 class="font-semibold mb-3 text-xl">Contact</h1>
+            <router-link  to="/contact" class="text-white flex items-center gap-2 hover:underline underline-offset-2 group">
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 8 12"
+                fill="none"
+                class="w-3 h-3 stroke-white stroke-[2.5] transition-transform duration-200 group-hover:translate-x-1"
+              >
+                <path
+                  d="M1 1l5 5-5 5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <a>Contact us</a>
+            </router-link>
+          </div>
+          <div>
+            <h1 class="font-semibold mb-3 text-xl">Organisation</h1>
+            <router-link  to="/" class="text-white flex items-center gap-2 hover:underline underline-offset-2 group">
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 8 12"
+                fill="none"
+                class="w-3 h-3 stroke-white stroke-[2.5] transition-transform duration-200 group-hover:translate-x-1"
+              >
+                <path
+                  d="M1 1l5 5-5 5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <a>The Danish Ministry of Taxation</a>
+            </router-link>
+          </div>
+          <div>
+            <h1 class="font-semibold mb-3 text-xl">Help & Resources</h1>
+            <router-link  to="/" class="text-white flex items-center gap-2 hover:underline underline-offset-2 group">
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 8 12"
+                fill="none"
+                class="w-3 h-3 stroke-white stroke-[2.5] transition-transform duration-200 group-hover:translate-x-1"
+              >
+                <path
+                  d="M1 1l5 5-5 5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <a>Change current cookie setting</a>
+            </router-link>
+          </div>
+          <div>
+            <h1 class="font-semibold mb-3 text-xl">Languages</h1>
+            <router-link  to="/" class="text-white flex items-center gap-2 hover:underline underline-offset-2 group">
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 8 12"
+                fill="none"
+                class="w-3 h-3 stroke-white stroke-[2.5] transition-transform duration-200 group-hover:translate-x-1"
+              >
+                <path
+                  d="M1 1l5 5-5 5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <a>Dansk</a>
+            </router-link>
+          </div>
+        </div>
+      </div>
+    </footer>
+</template>
+<script setup>
+import { ref } from "vue";
+const showMenu = ref(false);
+const Accord = ref(false);
+const cord = ref(null)
+const showSearch = ref(false);
+function toggleSearch() {
+  showSearch.value = !showSearch.value;
+}
+function toggleMenu() {
+  showMenu.value = !showMenu.value;
+}
+function closeMenu() {
+  showMenu.value = false;
+}
+function toggleAccordion(index){
+     Accord.value = Accord.value === index ? false : index;
+}
+const sectionToggle = (index) => {
+  cord.value = cord.value === index ? null : index;
+}
+</script>
+<style scoped>
+.slide-fade-enter-active {
+  transition: all 0.3s ease;
+}
+.slide-fade-leave-active {
+  transition: all 0.2s ease;
+}
+.slide-fade-enter-from,
+.slide-fade-leave-to {
+  opacity: 0;
+  transform: translatex(-100px);
+}
+button[aria-expanded="true"] svg {
+  transform: rotate(180deg);
+}
+</style>
